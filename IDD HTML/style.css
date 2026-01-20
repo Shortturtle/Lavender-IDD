@@ -1,0 +1,192 @@
+body {
+    /* Frame 1 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 50px;
+    isolation: isolate;
+
+    position: relative;
+    width: 1385px;
+    height: 4375px;
+
+    background: #D9D9D9;
+
+}
+
+.header {
+    /* Header */
+
+    position: absolute;
+    width: 1370px;
+    height: 110px;
+    left: 8px;
+    top: 8px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    z-index: 4;
+
+}
+
+.header .rectangle {
+    /* Rectangle 2 */
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+    left: 8px;
+    right: 8px;
+    top: 8px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+}
+
+.header .rectangle .logo-group {
+    /* Logo group */
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 308.32px;
+    height: 71.36px;
+    margin: 8px;
+}
+
+.header .rectangle .logo-group .logo {
+    /* Vector */
+
+    position: relative;
+    display: flex;
+    left: 9.17%;
+    right: 85.78%;
+    top: 0.71%;
+    bottom: 97.69%;
+
+}
+
+.header .rectangle .logo-group .company-name {
+    /* Lavender */
+
+    position: relative;
+    width: 228.49px;
+    height: 67.62px;
+    left: 3vw;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #515151;
+
+
+}
+
+.header .rectangle .menu-group {
+    /* Group 2 */
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 627.49px;
+    height: 44.12px;
+    margin: 8px;
+}
+
+.header .rectangle .menu-group .menu-buttons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 510.12px;
+    height: 44.12px;
+    right: 5vw;
+}
+
+.header .rectangle .menu-group .menu-buttons .home {
+    /* Home */
+
+    position: relative;
+    width: auto;
+    height: 43.08px;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42.3252px;
+    line-height: 41px;
+    display: flex;
+    text-align: center;
+    margin-left: 3vw;
+
+    align-items: center;
+
+    color: #735DB0;
+}
+
+.header .rectangle .menu-group .menu-buttons .about-us {
+    /* Home */
+
+    position: relative;
+    width: auto;
+    height: 43.08px;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42.3252px;
+    line-height: 41px;
+    display: flex;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+
+    color: #735DB0;
+
+
+}
+
+.header .rectangle .menu-group .menu-buttons .contact-us {
+    /* Home */
+
+    position: relative;
+    width: auto;
+    height: 43.08px;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42.3252px;
+    line-height: 41px;
+    display: flex;
+    margin-right: 3vw;
+    align-items: center;
+        
+    white-space: nowrap;
+
+    color: #735DB0;
+}
+
+.header .rectangle .menu-group .burger-menu {
+    /* Home */
+
+    position: relative;
+    width: 101.45px;
+    height: 43.08px;
+}
