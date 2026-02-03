@@ -202,26 +202,19 @@ body {
 .content .main-image {
     /* Main Product Image */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-padding: 75px 0px 0px;
-gap: 10px;
+    /* Auto layout */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
 
-position: relative;
-width: 100%;
-height: 757px;
+    position: relative;
 
-/* BackgroundDark */
-background: #41355C;
+    padding: 0px 1000px;
+    width: 100%;
+    height: 757px;
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
+    /* BackgroundDark */
+    background: #41355C;
 }
 
 .content .description-area {
