@@ -6,12 +6,12 @@ body {
     flex-direction: column;
     align-content: center;
     margin: 0px;
-    padding: 0px 10px;
+    padding: 0px;
     gap: 50px;
 
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 7000px;
 
     /* Page Background */
     background: #F7F4FF;
@@ -196,46 +196,46 @@ body {
     justify-content: space-between;
 
     margin: 0px;
-    padding: 0px 10px;
+    width: 100%;
 }
 
 .content .main-image-bg {
-/* Main Product Image */
+    /* Main Product Image */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-padding: 75px 0px 0px;
-gap: 10px;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 75px 0px 0px;
+    gap: 10px;
 
-width: 100%;
-height: 757px;
+    width: 100%;
+    height: 700px;
 
-/* BackgroundDark */
-background: #41355C;
+    /* BackgroundDark */
+    background: #41355C;
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0
 }
 
-.content .main-image{
-/* Missing Image icon */
+.content .main-image {
+    /* Missing Image icon */
 
-margin: 0 auto;
-width: 350px;
-height: 350px;
+    margin: 0 auto;
+    width: 350px;
+    height: 350px;
 
-background: #5E5279;
+    background: #5E5279;
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .content .description-area {
@@ -315,26 +315,24 @@ flex-grow: 0;
 }
 
 .content .features-and-details {
-    /* Features + Details */
-
     /* Auto layout */
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px;
-    gap: 10%;
 
     width: 100%;
-    height: 580px;
+    height: 520px;
 
     /*BackgroundNeutral*/
     background: #716194;
 
     /* Inside auto layout */
     flex: none;
-    order: 5;
+    order: 2;
     flex-grow: 0;
-    z-index: 5;
+    z-index: 2;
 }
 
 .content .features-and-details .text {
@@ -441,13 +439,12 @@ flex-grow: 0;
 
 .content .features-and-details .image {
     /* Image swap */
+    width: 686.83px;
+    height: 464px;
 
-    width: 798px;
-    height: 539.1px;
-
-    /*Backgrounds*/
+    /* BackgroundLight*/
     background: #DFDAED;
-    border-radius: 15px;
+    border-radius: 13px;
 
     /* Inside auto layout */
     flex: none;
