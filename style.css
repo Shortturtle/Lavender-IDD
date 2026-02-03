@@ -4,7 +4,7 @@ body {
     /* Auto layout */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     margin: 0px;
     padding: 0px 10px;
     gap: 50px;
@@ -199,22 +199,43 @@ body {
     padding: 0px 10px;
 }
 
-.content .main-image {
-    /* Main Product Image */
+.content .main-image-bg {
+/* Main Product Image */
 
-    /* Auto layout */
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+padding: 75px 0px 0px;
+gap: 10px;
 
-    position: relative;
+width: 100%;
+height: 757px;
 
-    padding: 0px 1000px;
-    width: 100%;
-    height: 757px;
+/* BackgroundDark */
+background: #41355C;
 
-    /* BackgroundDark */
-    background: #41355C;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0
+}
+
+.content .main-image{
+/* Missing Image icon */
+
+margin: 0 auto;
+width: 350px;
+height: 350px;
+
+background: #5E5279;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
 }
 
 .content .description-area {
@@ -224,19 +245,39 @@ body {
     align-items: center;
 
     padding: 50px;
-    gap: 30px;
+    gap: 20px;
+}
+
+.content .description-area .product-name {
+    /* GAIVA */
+    width: 65px;
+    height: 24px;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* TextDark */
+    color: #423172;
 }
 
 .content .description-area .hook-text {
     font-family: 'Iceland';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 60px;
     line-height: 31px;
     /* identical to box height */
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 10px;
 
     /* TextNeutral */
     color: #735DB0;
@@ -250,25 +291,166 @@ body {
 }
 
 .content .description-area .desc-text {
-    width: 700px;
+    width: 800px;
 
     font-family: 'Iceland';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 31px;
+    font-size: 20px;
+    line-height: 20px;
 
     /* identical to box height */
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 
     color: #423172;
-
 
     /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
     z-index: 1;
+}
+
+.content .features-and-details {
+    /* Features + Details */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 10%;
+
+    width: 100%;
+    height: 580px;
+
+    /*BackgroundNeutral*/
+    background: #716194;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+    z-index: 5;
+}
+
+.content .features-and-details .text {
+    /* What is GAIVA? GAIVA is a tabletop AI assistant that can assist you in your daily tasks, work, or even in games. What can GAIVA do? ... ... */
+
+    width: 527px;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    /* or 38px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+
+    color: #F7F4FF;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.content .features-and-details .what-is-gaiva {
+    /* What is GAIVA? GAIVA is a tabletop AI assistant that can assist you in your daily tasks, work, or even in games. What can GAIVA do? ... ... */
+
+    width: 527px;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: #F7F4FF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content .features-and-details .what-is-gaiva .desc-text {
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 100%;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content .features-and-details .what-can-gaiva-do {
+    /* What is GAIVA? GAIVA is a tabletop AI assistant that can assist you in your daily tasks, work, or even in games. What can GAIVA do? ... ... */
+
+    width: 527px;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: #F7F4FF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content .features-and-details .what-can-gaiva-do .desc-text {
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 100%;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content .features-and-details .image {
+    /* Image swap */
+
+    width: 798px;
+    height: 539.1px;
+
+    /*Backgrounds*/
+    background: #DFDAED;
+    border-radius: 15px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
