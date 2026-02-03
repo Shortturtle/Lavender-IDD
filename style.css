@@ -195,7 +195,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute;
 }
 
 .content .main-image {
@@ -203,7 +202,6 @@ body {
 
     /* Auto layout */
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
@@ -224,31 +222,31 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     
     padding: 50px 30%;
 }
 
 .content .description-area .hook-text {
-    font-family: 'Iceland';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 31px;
+font-family: 'Iceland';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 31px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
 
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #735DB0;
+/* TextNeutral */
+color: #735DB0;
 
 
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    z-index: 1;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
 }
 
 .content .description-area .desc-text {
