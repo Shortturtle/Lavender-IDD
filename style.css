@@ -437,10 +437,12 @@ body {
     flex-grow: 0;
 }
 
-.content .features-and-details .image {
+.content .features-and-details .detials-slideshow {
     /* Image swap */
+    position: relative;
     width: 686.83px;
     height: 464px;
+    overflow: hidden;
 
     /* BackgroundLight*/
     background: #DFDAED;
@@ -450,4 +452,50 @@ body {
     flex: none;
     order: 1;
     flex-grow: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.content .features-and-details .detials-slideshow .image-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .features-and-details .detials-slideshow .image-wrapper .slide {
+    opacity: 0;
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+    z-index: 1;
+    transform: translateX(-25%);
+    transition: all 0.75s ease-in;
+}
+
+.content .features-and-details .detials-slideshow .image-wrapper .slide .slide-image {
+    width: auto;
+    height: auto;
+}
+
+.content .features-and-details .detials-slideshow .image-wrapper .active {
+    opacity: 1;
+    transform: translateX(-0%);
+}
+
+.content .features-and-details .detials-slideshow .left-arrow,
+.content .features-and-details .detials-slideshow .right-arrow {
+    padding-left: 2%;
+    padding-right: 2%;
+    border: none;
+    background: none;
+    z-index: 2;
+    cursor: pointer;
 }
