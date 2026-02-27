@@ -161,7 +161,7 @@ body {
     color: #423172;
 }
 
-.header .header-rectangle .menu-group .menu-buttons .contact-us {
+.header .header-rectangle .menu-group .menu-buttons .preorder {
     /* Home */
 
     position: relative;
@@ -794,140 +794,288 @@ Backgrounds
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    
+    overflow: hidden;
+
     width: 700px;
     height: 840px;
 
     background: linear-gradient(180deg, #716194 0%, #423172 100%);
 }
 
-.content .about-lavender{
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .message {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .message.bot {
+    background-color: #F7F4FF;
+    color: #41355C;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .message.user {
+    background: #41355C;
+    color: #F7F4FF;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .chat-input {
+    display: flex;
+    padding: 12px;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .chat-input .input-wrapper input {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 10px 48px 10px 16px;
+    background-color: #F7F4FF;
+    border: 1px solid #ddd;
+    border-radius: 9999px;
+    outline: none;
+    font-size: 25px;
+    font-family: 'Iceland';
+    font-style: normal;
+}
+
+::-webkit-input-placeholder {
+    color: #423172;
+    font-family: 'Iceland';
+    font-style: normal;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .chat-input .input-wrapper input:focus {
+    border-color: #4a90e2;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .chat-input .input-wrapper button {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #DFDAED;
+    color: #B8B0D4;
+    border: none;
+    border-radius: 9999px;
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content .ask-gaiva .background .gaiva-chat .gaiva-chatbox .chat-input .input-wrapper button:hover {
+    background: #357abd;
+}
+
+.typing {
+    font-style: italic;
+    color: #888;
+    font-size: 13px;
+}
+
+.content .about-lavender {
     /* About Lavender */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-margin: 30px 0px 30px;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0px 30px;
 
-width: 100%;
-height: 614px;
+    width: 100%;
+    height: 614px;
 
-/* TextDark */
-background: #423172;
+    /* TextDark */
+    background: #423172;
 
-/* Inside auto layout */
-flex: none;
-order: 6;
-flex-grow: 0;
-z-index: 6;
+    /* Inside auto layout */
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+    z-index: 6;
 
 }
 
-.content .about-lavender .about-header{
+.content .about-lavender .about-header {
     /* About Lavender */
-width: 407.8px;
-height: 71.29px;
+    width: 407.8px;
+    height: 71.29px;
 
-font-family: 'Iceland';
-font-style: normal;
-font-weight: 400;
-font-size: 68.0234px;
-line-height: 71px;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 68.0234px;
+    line-height: 71px;
 
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.02em;
-text-decoration-line: underline;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
 
-/* TextLight */
-color: #F7F4FF;
+    /* TextLight */
+    color: #F7F4FF;
 
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
 
 }
 
-.content .about-lavender .description{
+.content .about-lavender .description {
     /* This webpage is the product of a pair of Singapore Polytechnic students named Danish Naufal and Teo Kayl Leah, who created it for their CA3 for one of their modules: Interactive Digital Design. They created the name “Lavender” to use for their webpage to promote “Project GAIVA”, a product based on RAZER’s “Project AVA”. */
 
-width: 970px;
-height: 330px;
+    width: 970px;
+    height: 330px;
 
-font-family: 'Iceland';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 39px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-text-align: center;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 39px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 
-/* TextLight */
-color: #F7F4FF;
+    /* TextLight */
+    color: #F7F4FF;
 
 
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-z-index: 1;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
 
 }
 
-.content .footer{
+.content .footer {
     /* Footer */
 
-/* Auto layout */
-display: flex;
-justify-content: space-evenly;
-flex-direction: column;
-align-items: center;
-box-sizing: border-box;
-margin: 30px 0px 0px 0px;
-padding: 10px 0px;
+    /* Auto layout */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 30px 0px 0px 0px;
+    padding: 10px 0px;
 
-width: 100%;
-height: 362px;
+    width: 100%;
+    height: 362px;
 
-background: #D0CBE2;
+    background: #D0CBE2;
 
-/* Inside auto layout */
-flex: none;
-order: 7;
-flex-grow: 0;
-z-index: 7;
+    /* Inside auto layout */
+    flex: none;
+    order: 7;
+    flex-grow: 0;
+    z-index: 7;
 }
 
-.content .footer .contact-us{
+.content .footer .contact-us {
     /* Contact us */
-width: 190px;
-height: 50.96px;
+    width: 190px;
+    height: 50.96px;
 
-font-family: 'Iceland';
-font-style: normal;
-font-weight: 400;
-font-size: 43.6782px;
-line-height: 42px;
-text-decoration-line: underline;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43.6782px;
+    line-height: 42px;
+    text-decoration-line: underline;
 
-/* TextDark */
-color: #423172;
+    /* TextDark */
+    color: #423172;
 
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+
+}
+
+.content .footer .contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .footer .contact-info .phone,
+.content .footer .contact-info .email {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 0px 10px 0px;
+}
+
+.content .footer .contact-info .phone-text,
+.content .footer .contact-info .email-text {
+
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38.4857px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 0px 20px;
+
+    /* TextDark */
+    color: #423172;
+}
+
+.content .footer .social-media-icons {
+    /* Social Media Icons */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 56px;
+
+    width: 661px;
+    height: 52.5px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
 
 }

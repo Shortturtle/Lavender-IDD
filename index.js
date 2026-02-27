@@ -30,3 +30,7 @@ function changeSlide(n) {
 showSlides();
 
 //#endregion
+
+//#region AI Chatbot
+
+//#endregion
