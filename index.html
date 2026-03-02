@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1920, initial-scale=0.75">
+    <link type=”text/css” rel=”stylesheet” href=”./styles/style.css”>
     <title>Lavender GAIVA</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Iceland&display=swap"
         rel="stylesheet">
+    <script src="https://releases.ijewel3d.com/libs/webgi-v0/viewer-0.17.0.js"> </script>
 </head>
 
 <body>
@@ -153,6 +155,7 @@
                 <span class="subtext"> See the product for yourself! </span>
             </div>
             <div class="threed-preview">
+                <canvas style="width:100%; height: 100%;" id="webgi-canvas"></canvas>
             </div>
         </div>
         <div class="ask-gaiva">
@@ -174,8 +177,8 @@
                             <div class="input-wrapper">
                                 <input type="text" id="userInput" placeholder="Type a message..." />
                                 <button onclick="sendMessage()">
-                                    <svg width="40" height= "235" viewBox="0 0 51 35"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="40" height="235" viewBox="0 0 51 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M46.9592 17.4H3.48M46.9592 17.4L28.3253 31.32M46.9592 17.4L28.3253 3.47998"
                                             stroke="#B8B0D4" stroke-width="6.95996" stroke-linecap="round"
