@@ -1,0 +1,34 @@
+{
+  "name": "lavender-idd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shortturtle/Lavender-IDD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Shortturtle/Lavender-IDD/issues"
+  },
+  "homepage": "https://github.com/Shortturtle/Lavender-IDD#readme",
+  "dependencies": {
+    "@types/webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-types-0.11.1.tgz",
+    "gsap": "^3.14.2",
+    "three": "^0.183.2",
+    "vite": "^7.3.1",
+    "webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-0.11.1.tgz"
+  },
+  "devDependencies": {
+    "vite-plugin-top-level-await": "^1.6.0"
+  }
+}
