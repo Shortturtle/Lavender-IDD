@@ -5,9 +5,8 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin: 0px;
+    margin: 70px 0px 0px;
     padding: 0px;
-    gap: 50px;
 
     position: relative;
     width: 100%;
@@ -190,18 +189,15 @@ body {
 }
 
 .content .preorder {
-    /* Preorder */
-
     /* Auto layout */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    margin-bottom: 70px;
     padding: 120px 0px 0px;
-    gap: 10px;
 
     width: 100%;
-    height: 750px;
+    height: 715px;
 
     /* BackgroundDark */
     background: #41355C;
@@ -209,6 +205,7 @@ body {
     /* Inside auto layout */
     flex: none;
     order: 0;
+    align-self: stretch;
     flex-grow: 0;
     z-index: 0;
 }
@@ -221,7 +218,7 @@ body {
     align-items: center;
 
     width: 700px;
-    height: 620px;
+    height: 650px;
 
     /* Inside auto layout */
     flex: none;
@@ -279,7 +276,7 @@ body {
     width: 92px;
     height: 15px;
     left: calc(50% - 90px/2 + 260px);
-    top: calc(50% - 15px/2 - 145px);
+    top: calc(50% - 295px/2 - 260px);
 
     font-family: 'Iceland';
     font-style: italic;
@@ -388,4 +385,104 @@ textarea::placeholder {
     order: 7;
     flex-grow: 0;
     z-index: 7;
+}
+
+.content .footer {
+    /* Footer */
+
+    /* Auto layout */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 30px 0px 0px 0px;
+    padding: 10px 0px;
+
+    width: 100%;
+    height: 362px;
+
+    background: #D0CBE2;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 7;
+    flex-grow: 0;
+    z-index: 7;
+}
+
+.content .footer .contact-us {
+    /* Contact us */
+    width: 190px;
+    height: 50.96px;
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43.6782px;
+    line-height: 42px;
+    text-decoration-line: underline;
+
+    /* TextDark */
+    color: #423172;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+
+}
+
+.content .footer .contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .footer .contact-info .phone,
+.content .footer .contact-info .email {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 0px 10px 0px;
+}
+
+.content .footer .contact-info .phone-text,
+.content .footer .contact-info .email-text {
+
+
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38.4857px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 0px 20px;
+
+    /* TextDark */
+    color: #423172;
+}
+
+.content .footer .social-media-icons {
+    /* Social Media Icons */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 56px;
+
+    width: 661px;
+    height: 52.5px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
 }
