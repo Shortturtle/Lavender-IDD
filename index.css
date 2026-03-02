@@ -223,14 +223,13 @@ body {
     z-index: 0
 }
 
-.content .main-video-bg .video{
+.content .main-video-bg .video {
     /* Missing Image icon */
     display: flex;
     width: auto;
     height: 100%;
-    
 
-    background: #5E5279;
+
 
     /* Inside auto layout */
     flex: none;
@@ -674,13 +673,78 @@ body {
 
 }
 
-.content .interactive-preview .threed-preview {
+.content .interactive-preview .interaction-section {
+    /* Interactive Model */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.content .interactive-preview .interaction-section .assistant-select,
+.content .interactive-preview .interaction-section .color-select {
+    display: flex;
+    width: 200px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .interactive-preview .interaction-section .assistant-select .assistant-select-text,
+.content .interactive-preview .interaction-section .color-select .color-select-text {
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+
+    color: #423172;
+}
+
+.content .interactive-preview .interaction-section .assistant-select .button-group,
+.content .interactive-preview .interaction-section .color-select .button-group {
+    display: flex;
+    width: 200px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content .interactive-preview .interaction-section .assistant-select .assistant-select-button,
+.content .interactive-preview .interaction-section .color-select .color-select-button {
+    padding: 0px;
+    border: 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #735DB0;
+    transition: all 0.1s ease-in-out;
+    overflow: hidden;
+}
+
+.content .interactive-preview .interaction-section .assistant-select .assistant-select-button:hover,
+.content .interactive-preview .interaction-section .color-select .color-select-button:hover {
+    cursor: pointer;
+    box-shadow: #41355C 0px 0px 10px 10px;
+    transform: scale(1.1);
+}
+
+.content .interactive-preview .interaction-section .threed-preview {
     /* Interactive Model */
     position: relative;
     width: 100%;
-    max-width: 1244px;
+    max-width: 1067px;
     height: auto;
-    max-height: 700px;
+    max-height: 600px;
     aspect-ratio: 16/9;
     background-color: #41355C;
     box-shadow: 0 0 15px 10px #735DB0;
@@ -688,9 +752,7 @@ body {
 
     /* Inside auto layout */
     flex: none;
-    order: 1;
     flex-grow: 0;
-
 }
 
 .content .ask-gaiva {
