@@ -48,12 +48,11 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 110px;
-    left: 10px;
-    right: 10px;
-    top: 10px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
 
     background: #F7F4FF;
-    border-radius: 10px;
 }
 
 .header .header-rectangle .logo-group {
@@ -283,7 +282,6 @@ body {
 
     /* TextNeutral */
     color: #735DB0;
-
 
     /* Inside auto layout */
     flex: none;
@@ -1077,5 +1075,4 @@ Backgrounds
     order: 2;
     flex-grow: 0;
     z-index: 2;
-
 }
