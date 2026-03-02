@@ -58,7 +58,7 @@ viewer
 
     // Load a model
     const model =
-      "https://demo-assets.pixotronics.com/pixo/gltf/earringScene2.glb";
+      "/Homosexual_GAYva/GayvaGLB.glb";
     viewer.load(model);
     console.log(viewer);
   });
