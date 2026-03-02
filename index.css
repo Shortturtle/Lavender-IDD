@@ -198,7 +198,7 @@ body {
     width: 100%;
 }
 
-.content .main-image-bg {
+.content .main-video-bg {
     /* Main Product Image */
 
     /* Auto layout */
@@ -223,12 +223,12 @@ body {
     z-index: 0
 }
 
-.content .main-image {
+.content .main-video-bg .video{
     /* Missing Image icon */
     display: flex;
-    margin: auto;
-    width: 350px;
-    height: 350px;
+    width: auto;
+    height: 100%;
+    
 
     background: #5E5279;
 
@@ -486,7 +486,7 @@ body {
 }
 
 .content .features-and-details .detials-slideshow .image-wrapper .slide .slide-image {
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
@@ -678,9 +678,9 @@ body {
     /* Interactive Model */
     position: relative;
     width: 100%;
-    max-width: 1422px;
+    max-width: 1244px;
     height: auto;
-    max-height: 800px;
+    max-height: 700px;
     aspect-ratio: 16/9;
     background-color: #41355C;
     box-shadow: 0 0 15px 10px #735DB0;
