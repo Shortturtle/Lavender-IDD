@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -29,6 +28,7 @@
     "webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-0.11.1.tgz"
   },
   "devDependencies": {
+    "typescript": "^5.9.3",
     "vite-plugin-top-level-await": "^1.6.0"
   }
 }

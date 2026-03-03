@@ -13,6 +13,14 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Iceland&display=swap"
         rel="stylesheet">
     <script src="https://releases.ijewel3d.com/libs/webgi-v0/viewer-0.17.0.js"> </script>
+    <script type="importmap">
+{
+  "imports": {
+    "threepipe": "https://unpkg.com/threepipe@latest/dist/index.mjs",
+    "@threepipe/webgi-plugins": "https://unpkg.com/@threepipe/webgi-plugins@latest/dist/index.mjs"
+  }
+}
+</script>
 </head>
 
 <body>
@@ -139,7 +147,7 @@
                 <div class="assistant-select">
                     <span class="assistant-select-text">Assistant</span>
                     <div class="button-group">
-                        <button class="assistant-select-button">
+                        <button class="assistant-select-button" onclick=ChangeAssistant(1)>
                             <img src="WebsiteAssets/3DScene/Textures/Ava.png" style="position: relative; width: 100%;">
                         </button>
                         <button class="assistant-select-button">
@@ -157,7 +165,7 @@
                 <div class="color-select">
                     <span class="color-select-text">Color</span>
                     <div class="button-group">
-                        <button class="color-select-button">
+                        <button class="color-select-button" onclick=TestLog()>
                             <div style="background-color: black; align-self: center; width: 100%; height: 100px;"></div>
                         </button>
                         <button class="color-select-button">
@@ -280,7 +288,7 @@
         </div>
     </div>
     </div>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
