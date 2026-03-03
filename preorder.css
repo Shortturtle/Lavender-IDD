@@ -82,7 +82,7 @@ body {
     position: relative;
     width: 228.49px;
     height: 67.62px;
-    left: 3vw;
+    left: 5vw;
 
     font-family: 'Iceland';
     font-style: normal;
@@ -113,7 +113,6 @@ body {
     align-items: center;
     width: 510.12px;
     height: 44.12px;
-    right: 5vw;
 }
 
 .header .header-rectangle .menu-group .menu-buttons .home {
@@ -131,10 +130,11 @@ body {
     display: flex;
     text-align: center;
     margin-left: 3vw;
+    text-decoration: none;
 
     align-items: center;
 
-    color: #735DB0;
+    color: #423172;
 }
 
 .header .header-rectangle .menu-group .menu-buttons .about-us {
@@ -154,6 +154,7 @@ body {
     margin-right: 3vw;
     align-items: center;
     text-align: center;
+    text-decoration: none;
     white-space: nowrap;
 
     color: #423172;
@@ -173,19 +174,12 @@ body {
     line-height: 41px;
     display: flex;
     margin-right: 3vw;
+    text-decoration: none;
     align-items: center;
 
     white-space: nowrap;
 
     color: #423172;
-}
-
-.header .header-rectangle .menu-group .burger-menu {
-    /* Home */
-
-    position: relative;
-    width: 101.45px;
-    height: 43.08px;
 }
 
 .content .preorder {

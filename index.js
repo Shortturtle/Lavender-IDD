@@ -31,7 +31,7 @@ showSlides();
 //#endregion
 
 //#region AI Chatbot
-const API_KEY = "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"; // Replace with your actual key
+const API_KEY = import.meta.env.VITE_API_KEY; // Replace with your actual key
 const API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 const conversationHistory = [
@@ -86,7 +86,7 @@ function addTypingIndicator() {
   const typing = document.createElement("div");
   typing.className = "message bot typing";
   typing.id = "typingIndicator";
-  typing.textContent = "Bot is typing...";
+  typing.textContent = "Ava is thinking...";
   messages.appendChild(typing);
   messages.scrollTop = messages.scrollHeight;
 }
@@ -131,7 +131,7 @@ document.getElementById("userInput").addEventListener("keypress", function (e) {
 
 
 //$region WebGi
-import * as THREE from "three";
+import * as THREE from "/node_modules/three";
 
 const viewer = new CoreViewerApp({
   canvas: document.getElementById("webgi-canvas")
@@ -140,7 +140,7 @@ const viewer = new CoreViewerApp({
 viewer
   .initialize({
     caching: true,
-    ground: true,
+    ground: false,
     bloom: true,
     enableDrop: false
   })
@@ -153,10 +153,12 @@ viewer
     loadingScreen.loadingTextHeader = "Loading Custom 3D Experience";
     loadingScreen.showFileNames = false;
     // Set Environment Map
-    viewer.setEnvironmentMap('/WebsiteAssets/3DScene/cabin_4k.exr');
+    viewer.setEnvironmentMap('/WebsiteAssets/3DScene/pav_studio_03_4k.exr');
     // Load a model
     const model = "/WebsiteAssets/3DScene/Gayva.glb"
 
+    // Set BG Color
+    viewer.scene.background = new THREE.Color('#708090');
     // Set Cam Position
     viewer.scene.activeCamera.position = new Vector3(0, 4, 20);
     viewer.scene.activeCamera.target = new Vector3(0, 4, 0);
@@ -165,36 +167,20 @@ viewer
     console.log(viewer);
   });
 
-let assistantIndex = 0;
-const assistantButtons = document.querySelectorAll('.assistant-select-button');
 
-function TestLog() {
-  const object = viewer.scene.modelRoot;
-
-  console.log(object);
-
-  object.traverse((child) => {
-    console.log(child.material);
-    if (child.material === undefined) {
-      return;
-    }
-  })
-}
-
-function ButtonSelect(buttonList, n) {
-  buttonList.forEach(button => {
-    button.classList.remove('selected');
-  });
-
-  buttonList[n].classList.add("selected");
-}
+const avatarTextures = [
+  "/WebsiteAssets/3DScene/Textures/Ava.png",
+  "/WebsiteAssets/3DScene/Textures/Gaia.png",
+  "/WebsiteAssets/3DScene/Textures/Zelda.png"
+]
 
 function ChangeAssistant(n) {
-  //if (n == assistantIndex) { return; }
 
   const object = viewer.scene.modelRoot;
 
   let avatar = null;
+  let loader = null;
+  let texture = null;
 
   object.traverse((child) => {
     if (child.material === undefined) { return; }
@@ -206,33 +192,105 @@ function ChangeAssistant(n) {
       console.log("Material type:", child.material?.type);
       console.log("Material name:", child.material?.name);
       avatar = child;
-      console.log(avatar);
       return;
     }
   })
 
-  switch (n) {
-    case 1:
-      console.log("one");
-      const importer = viewer.getManager().importer;
-      const textureResult = importer.importSinglePath("/WebsiteAssets/3DScene/Textures/Zelda.png");
-      const texture = textureResult.userData?.texture ?? textureResult;
+  loader = new THREE.TextureLoader();
+  texture = loader.load(avatarTextures[n]);
 
-      texture.flipY = false;
-      texture.needsUpdate = true;
+  texture.flipY = false;
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.needsUpdate = true;
+
+  viewer.scene.setDirty?.();
+  avatar.material.map = texture;
+  console.log(avatar.material);
+
+  viewer.setDirty();
+}
+
+function ChangeColor(n) {
+
+  const object = viewer.scene.modelRoot;
+
+  let loader = null;
+  let topTexture = null;
+  let bottomTexture = null;
+  let legTexture = null;
+
+  loader = new THREE.TextureLoader();
+  topTexture = loader.load(`WebsiteAssets/3DScene/Textures/Top_Color${n + 1}.png`);
+  bottomTexture = loader.load(`WebsiteAssets/3DScene/Textures/Bottom_Color${n + 1}.png`);
+  legTexture = loader.load(`WebsiteAssets/3DScene/Textures/legs_Color${n + 1}.png`);
 
 
-      // viewer.scene.setDirty?.();
-      // const newMat = avatar.material.clone();
-      // newMat.map = texture;
-      // console.log(newMat);
-      // console.log(newMat.map);
-      // avatar.material = newMat;
-      // console.log(avatar.material);
-      // avatar.material.needsUpdate = true;
-      // viewer.setDirty();
 
-      avatar.material
-  }
+  object.traverse((child) => {
+    if (child.material === undefined) { return; }
+
+    if (child.material.name === "lambert7") {
+      topTexture.flipY = false;
+      topTexture.colorSpace = THREE.SRGBColorSpace;
+      topTexture.needsUpdate = true;
+
+      viewer.scene.setDirty?.();
+      child.material.map = topTexture;
+    }
+
+    if (child.material.name === "lambert8") {
+      bottomTexture.flipY = false;
+      bottomTexture.colorSpace = THREE.SRGBColorSpace;
+      bottomTexture.needsUpdate = true;
+
+      viewer.scene.setDirty?.();
+      child.material.map = bottomTexture;
+    }
+
+    if (child.material.name === "lambert10") {
+      legTexture.flipY = false;
+      legTexture.colorSpace = THREE.SRGBColorSpace;
+      legTexture.needsUpdate = true;
+
+      viewer.scene.setDirty?.();
+      child.material.map = legTexture;
+    }
+
+  })
+  viewer.setDirty();
 }
 //#endregion
+
+//#region GSAP Animations
+import { gsap } from "gsap/dist/gsap";
+
+const features = document.getElementById("features-and-details");
+console.log(features);
+
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && // check against viewport height
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) // check against viewport width
+  );
+}
+
+function featuresAndDetailCheck() {
+  if (isElementInViewport(features)) {
+    console.log("Condition met!");
+    gsap.to(".features-and-details .text", { duration: 0.5, y: 0 });
+  }
+
+  setTimeout(featuresAndDetailCheck, 50);
+}
+
+featuresAndDetailCheck();
+
+//#endregion
+
+window.changeSlide = changeSlide;
+window.ChangeAssistant = ChangeAssistant;
+window.sendMessage = sendMessage;
+window.ChangeColor = ChangeColor;
